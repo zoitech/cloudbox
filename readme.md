@@ -52,7 +52,7 @@ docker run -d \
   -e PASSWORD=REPLACEME \
   --env-file <(env | grep -i proxy) \
   --restart always \
-  derbrobro/cloudbox:$IMAGE_TAG
+  derbrobro/cloudbox:latest
 ```
 
 Afterward you can launch your browser on localhost:8000, password ist the ```machine-id``` or ```REPLACEME``` (which should obviously replaced)/

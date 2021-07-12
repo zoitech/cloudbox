@@ -2,7 +2,6 @@
 set -euo pipefail
 docker rm -f cloudbox
 
-IMAGE_TAG="latest"
 PW=$(cat /etc/machine-id)
 echo "Password: ${PW}"
 
@@ -24,4 +23,4 @@ docker run -d \
   -e PASSWORD=${PW} \
   --env-file <(env | grep -i proxy) \
   --restart always \
-  derbrobro/cloudbox:$IMAGE_TAG
+ derbrobro/cloudbox:latest
